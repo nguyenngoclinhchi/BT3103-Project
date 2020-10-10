@@ -1,6 +1,13 @@
 const webpack = require('webpack');
 
 module.exports = {
+    chainWebpack: config => {
+        config.module
+            .rule('html')
+            .test(/\.html$/)
+            .use('html-loader')
+            .loader('html-loader')
+    },
     configureWebpack: {
         // Set up all the aliases we use in our app.
         plugins: [

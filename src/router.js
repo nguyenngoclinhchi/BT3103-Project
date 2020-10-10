@@ -10,56 +10,47 @@ import AboutApp from "./views/AboutApp";
 import AppFooter from "./layout/AppFooter";
 import Covid19Statistics from "./views/Covid19Statistics";
 import CountryIndex from "./views/CountryIndex";
-import PinnedCountry from "@/views/PinnedCountry";
+import PinnedCountry from "./views/PinnedCountry";
 
 Vue.use(Router);
 
 export default new Router({
     linkExactActiveClass: "active",
+    mode: 'history',
     routes: [
         {
             path: "/",
             name: "components",
             components: {
-                // header: AppHeader,
                 default: Components,
-                // footer: AppFooter
             }
         },
         {
             path: "/landing",
             name: "landing",
             components: {
-                // header: AppHeader,
                 default: Landing,
-                // footer: AppFooter
             }
         },
         {
             path: "/login",
             name: "login",
             components: {
-                // header: AppHeader,
                 default: Login,
-                // footer: AppFooter
             }
         },
         {
             path: "/register",
             name: "register",
             components: {
-                // header: AppHeader,
                 default: Register,
-                // footer: AppFooter
             }
         },
         {
             path: "/profile",
             name: "profile",
             components: {
-                // header: AppHeader,
                 default: Profile,
-                // footer: AppFooter
             }
         },
         {
